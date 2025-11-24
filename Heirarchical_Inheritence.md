@@ -31,6 +31,32 @@ To write a Python program that uses **Hierarchical Inheritance** to input and di
 5. Display collected information using class methods.
 
 ## Program
-Add code here
+```
+# Single inheritance in python
+#Base class
+class Details(object): 
+# Constructor 
+    def __init__(self, name, id): 
+        self.name = name 
+        self.id = id
+# To fetch employee details 
+    def Employee_Details(self): 
+        return self.id , self.name
+# derived class or the sub class
+class Patient_details(Employee_details): 
+    # To check if this  is a valid employee 
+    def Employee_check(self): 
+        if self.id > 500000:
+           return " Valid Employee "
+        else:
+           return " Invalid Employee "
+# Driver code 
+id=int(input())
+name=input()
+Employee1 = Patient_details( name , id)  # parent class object
+print( Employee1.Employee_Details() , Employee1.Employee_check() )
+```
 ## Sample Output
-
+<img width="811" height="229" alt="517440870-ea01142f-03a2-4a59-8e95-a6549b12702c" src="https://github.com/user-attachments/assets/013bc8f0-0317-47d3-a0df-786aa22868df" />
+## Result
+Thus the output is verified.
